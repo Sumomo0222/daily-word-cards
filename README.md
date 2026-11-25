@@ -3,11 +3,24 @@
 每天上午 **08:27**（北京时间，Asia/Shanghai）由 ZCode 定时任务自动生成新一期，每期 5 个
 生活 / 职场常用词，难度四六级 → 雅思 6–7。首页为**滑动卡片学习模式**，按艾宾浩斯遗忘曲线调度复习。
 
-- **学习模式（最新一期 + 到期复习）**：http://127.0.0.1:8384/
-- **风格预览**：http://127.0.0.1:8384/styles.html
-- **往期归档（按日期浏览）**：http://127.0.0.1:8384/archive/index.html
-- **手机访问**：手机连同一 Wi-Fi，打开 `http://<本机IP>:8384/`（本机 IP 用 `ipconfig getifaddr en0` 查询）
-- **自动更新**：ZCode 定时任务「每天上午8点27分更新每日英语单词卡」（cron `27 8 * * *`，主机时区 Asia/Shanghai）
+- **线上（CDN）**：https://zai.site （GitHub Pages/Fastly CDN；DNS 未生效前备用地址 https://sumomo0222.github.io/daily-word-cards/ 也会重定向到 zai.site）
+- **本地**：http://127.0.0.1:8384/ （局域网 `http://<本机IP>:8384/`，本机 IP 用 `ipconfig getifaddr en0` 查询）
+- **风格预览**：[/styles.html](https://zai.site/styles.html)
+- **往期归档**：[/archive/index.html](https://zai.site/archive/index.html)
+- **自动更新**：ZCode 定时任务「每天上午8点27分更新每日英语单词卡」（cron `27 8 * * *`，Asia/Shanghai）——
+  每天 08:27 抓取词典生成新一期，构建后自动 `git push` 到 GitHub，CDN 随之更新。
+
+## 部署架构（纯静态 CDN 友好）
+
+- 仓库：https://github.com/Sumomo0222/daily-word-cards （Pages 由 main 分支根目录发布）。
+- 艾宾浩斯调度在**浏览器端**完成：复习进度存于各设备 localStorage（键 `wc-srs`），页面加载时
+  自行组卡组（到期复习词 + 当日新词 + 加练词池），无需服务器也能完整运转；构建时把本机
+  `data/review-state.json` 作为「种子」嵌入页面，新设备首次打开会继承本地进度。本地服务
+  （server.py）部署下，滑动还会 fire-and-forget 同步到 `/api/review`。
+- 代价：各浏览器/设备的进度相互独立（localStorage 隔离），不做云端合并。
+- `data/review-state.json` 在 .gitignore 中，不入库（隐私）。
+- zai.site 域名：阿里云 DNS 添加 A 记录 `@ → 185.199.108.153 / 185.199.109.153 / 185.199.110.153 / 185.199.111.153`，
+  DNS 生效后 GitHub 自动签发 HTTPS 证书，即可用 https://zai.site 访问。
 
 ## 界面风格
 
