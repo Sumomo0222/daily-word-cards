@@ -87,7 +87,8 @@ function nextUnlearnedBatch() {
   const today = bjDateStr();
   for (const d of allDates()) {
     if (d > today || !batchAvailable(d)) break;
-    if (!S.batchesDone.includes(d)) return d;
+    // 批次里还有从未学过的词才算未学完；中途退出的批次只补剩余的新词
+    if (!S.batchesDone.includes(d) && DAYS[d].some((e) => !S.words[e.w])) return d;
   }
   return null;
 }
@@ -108,7 +109,8 @@ function dueList() {
 function buildRound() {
   const due = dueList().slice(0, 12);
   const batch = nextUnlearnedBatch();
-  const news = batch ? DAYS[batch].map((e) => ({ ...e, batch })) : [];
+  // 只取本批次里尚未学过的新词（中途退出后补学剩余部分）
+  const news = batch ? DAYS[batch].filter((e) => !S.words[e.w]).map((e) => ({ ...e, batch })) : [];
   queue = [...due, ...news];
   round = { batch, total: queue.length, done: 0, kept: 0, agained: 0, news: news.length, reviews: due.length };
 }
@@ -119,7 +121,8 @@ function applyResult(entry, kept) {
   const rec = S.words[entry.w] || { stage: 0, next: today, status: 'learning', last: null };
   if (kept) {
     const stage = rec.stage + 1;
-    if (stage >= INTERVALS.length) {
+    if (stage > INTERVALS.length) {
+      // 通过全部 6 档间隔（1/2/4/7/15/30 天）后毕业
       rec.stage = INTERVALS.length;
       rec.status = 'mastered';
       rec.next = null;
@@ -219,7 +222,7 @@ function cardEl(entry, idx) {
           <p class="def-en">${esc(entry.en)}</p>
           <p class="def-zh">${esc(entry.zh)}</p>
         </div>
-        <div class="sec-title">例句 <span class="mini">（均为自编例句）</span></div>
+        <div class="sec-title">例句 <span class="mini">（来源逐条标注）</span></div>
         ${entry.ex.map((x) => `
           <div class="ex">
             <p class="ex-en">${hl(x.en, entry.w)}</p>
@@ -343,7 +346,7 @@ function renderDoneCard() {
   el.className = 'card done-card c0';
   let unlockText;
   if (nextBatch) {
-    unlockText = '以上新词来自更早的未学批次，学完继续。';
+    unlockText = '词库里还有已解锁的未学批次，点上方按钮继续。';
   } else if (locked) {
     unlockText = `下一批新词（${fmtMD(locked)} · 第 ${batchNo(locked)} 期）将于北京时间 08:27 解锁 · 倒计时 <span id="cd">--:--:--</span>`;
   } else {

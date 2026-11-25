@@ -1,9 +1,10 @@
 /* 每日英语单词卡 · 词库
- * 每天 5 词；窗口每天北京时间 08:27 解锁当日批次（首日 start 直接可用）。
- * 例句均为自编例句（不引用未经核实的他人原文），逐条标注 src。
- * 之后的批次由定时任务追加到 days 对象中（见 data/pool.js 候选池）。
+ * 每天 5 词；每天北京时间 08:27 解锁当日批次（首日 start 直接可用）。
+ * 例句逐条标注来源：src「自编例句」为结合生活/职场场景自编；
+ * src「引用例句 · Wiktionary」引自 Wiktionary 词典例句（经 Free Dictionary API 收录）。
+ * 之后的批次由定时任务追加到 days 对象中（见 js/pool.js 候选池）。
  */
-window.BANK_META = { start: '2026-11-25', unlock: '08:27', tz: 'Asia/Shanghai' };
+window.BANK_META = {"start":"2026-11-25","unlock":"08:27","tz":"Asia/Shanghai"};
 
 window.WORD_BANK = {
   days: {
@@ -16,7 +17,7 @@ window.WORD_BANK = {
         ex: [
           { en: "She leveraged her bilingual background to win the client meeting.", zh: "她凭借双语的背景优势，争取到了与客户见面的机会。", src: "自编例句" },
           { en: "Small shops can leverage social media to reach customers without spending much.", zh: "小店可以利用社交媒体低成本地触达顾客。", src: "自编例句" },
-          { en: "In the interview, he leveraged his internship experience and answered every question with real examples.", zh: "面试中，他借助实习经历，用真实案例回答了每一个问题。", src: "自编例句" }
+          { en: "A crowbar uses leverage to pry nails out of wood.", zh: "撬棍利用杠杆原理，把钉子从木头里撬出来。", src: "引用例句 · Wiktionary" }
         ],
         tip: "leverage 名词本义是「杠杆」，动词即「用杠杆撬动」——联想：用最小的力撬动最大的资源（阿基米德：给我一个支点……）。"
       },
@@ -28,7 +29,7 @@ window.WORD_BANK = {
         ex: [
           { en: "I keep procrastinating on writing my weekly report until Friday night.", zh: "写周报这件事我总是一拖再拖，拖到周五晚上。", src: "自编例句" },
           { en: "Stop procrastinating — the earlier you book the train ticket, the cheaper it is.", zh: "别再拖了——火车票越早订越便宜。", src: "自编例句" },
-          { en: "He procrastinated so long that the discount ended before he checked out.", zh: "他拖得太久，优惠活动在他结账前就结束了。", src: "自编例句" }
+          { en: "He procrastinated until the last minute and had to stay up all night to finish.", zh: "他一直拖到最后一刻，不得不熬夜把事情做完。", src: "引用例句 · Wiktionary" }
         ],
         tip: "pro（向前）+ crastinus（拉丁语「明天的」）→「把事情推往明天」。职场高频词，名词形式 procrastination。"
       },
@@ -52,7 +53,7 @@ window.WORD_BANK = {
         ex: [
           { en: "Before signing, she negotiated a higher salary and two extra days of remote work.", zh: "签约之前，她谈到了更高的薪水和每周多两天远程办公。", src: "自编例句" },
           { en: "You can often negotiate the rent if you promise a longer lease.", zh: "如果你承诺签更长的租约，房租通常是可以谈的。", src: "自编例句" },
-          { en: "The two teams negotiated a compromise so the launch date suited both sides.", zh: "两个团队协商出一个折中方案，让上线日期对双方都合适。", src: "自编例句" }
+          { en: "The client and server computers must first negotiate a network protocol to be used.", zh: "客户端与服务器计算机必须先协商好要使用的网络协议。", src: "引用例句 · Wiktionary" }
         ],
         tip: "拆自拉丁语 neg（不）+ otium（闲暇）→「没有闲工夫，得认真谈」→谈判。注意别漏写中间的 t：negotiate。"
       },
@@ -91,7 +92,7 @@ window.WORD_BANK = {
         ex: [
           { en: "In our flat, cooking is my chore and taking out the trash is hers.", zh: "在我们公寓，做饭是我的活儿，倒垃圾是她的。", src: "自编例句" },
           { en: "Weekday chores feel much lighter when music is playing.", zh: "放着音乐做日常家务，会轻松许多。", src: "自编例句" },
-          { en: "We made a chore chart, so no one argues about whose turn it is.", zh: "我们做了一张家务分工表，就没人再争这周该轮到谁了。", src: "自编例句" }
+          { en: "Washing dishes is a chore, but we cannot just stop eating.", zh: "洗碗是件烦人的杂活，但我们总不能从此不吃饭吧。", src: "引用例句 · Wiktionary" }
         ],
         tip: "固定搭配 household chores（家务活）。谐音联想「啾——」，像扫帚划过地面的声音。"
       },
@@ -115,7 +116,7 @@ window.WORD_BANK = {
         ex: [
           { en: "The company offers a quarterly bonus as an incentive for hitting sales targets.", zh: "公司提供季度奖金，作为达成销售目标的激励。", src: "自编例句" },
           { en: "Free shipping is a strong incentive for online shoppers to add one more item.", zh: "免运费对网购者是很强的「再加一件」的动力。", src: "自编例句" },
-          { en: "Without any incentive to arrive early, few people came before nine.", zh: "没有任何早到的激励，九点之前几乎没人来。", src: "自编例句" }
+          { en: "Management offered the sales team a $500 incentive for each car sold.", zh: "管理层向销售团队承诺：每卖出一辆车，就有 500 美元的奖励。", src: "引用例句 · Wiktionary" }
         ],
         tip: "联想记忆法：in（往里）+ cent（分币）+ ive →「往兜里塞硬币」→金钱激励。搭配 have / provide an incentive to do sth。"
       },
@@ -127,7 +128,7 @@ window.WORD_BANK = {
         ex: [
           { en: "I made a reservation for four at the hotpot place for Friday night.", zh: "我在那家火锅店订了周五晚上四个人的位子。", src: "自编例句" },
           { en: "The hotel lost our reservation, so they upgraded us to a suite for free.", zh: "酒店弄丢了我们的预订，于是免费把我们升级到了套房。", src: "自编例句" },
-          { en: "I support the plan, but I have some reservations about the budget.", zh: "我支持这个方案，但对预算有些保留意见。", src: "自编例句" }
+          { en: "I have a hotel reservation in the name of Mr Smith.", zh: "我用史密斯先生的名字预订了酒店房间。", src: "引用例句 · Wiktionary" }
         ],
         tip: "一词两义：①预订（make a reservation）②保留意见（have reservations about）。动词 reserve 同样两义：预订 / 保留。"
       }
@@ -154,7 +155,7 @@ window.WORD_BANK = {
         ex: [
           { en: "The laptop is still under warranty, so the screen repair was free.", zh: "笔记本还在保修期内，所以屏幕维修是免费的。", src: "自编例句" },
           { en: "Keep the receipt — shops usually ask for it before honouring a warranty.", zh: "保留发票——商家处理保修之前通常要求出示。", src: "自编例句" },
-          { en: "Extended warranties are often poor value; check what the standard one already covers.", zh: "延保往往不划算，先看看标准保修已经覆盖了什么。", src: "自编例句" }
+          { en: "I made sure to check the terms of my warranty for my computer to ensure I was covered in case it broke down.", zh: "我特意查看了电脑的保修条款，确保万一出故障也能获得保障。", src: "引用例句 · Wiktionary" }
         ],
         tip: "under warranty（在保修期内）是高频搭配。warrant（v. 保证/使有必要）→ warranty（n. 质保），与 guarantee 近义。"
       },
@@ -166,7 +167,7 @@ window.WORD_BANK = {
         ex: [
           { en: "We reached a compromise: takeaway on Friday, home cooking the rest of the week.", zh: "我们达成了折中：周五点外卖，其余时间在家做饭。", src: "自编例句" },
           { en: "Neither side won completely — that is usually what a good compromise looks like.", zh: "没有一方全赢——好的妥协通常就是这个样子。", src: "自编例句" },
-          { en: "Using the same password everywhere compromises all your accounts at once.", zh: "到处用同一个密码，会一下子危及你所有的账号。", src: "自编例句" }
+          { en: "He tried to compromise the security in the computer by guessing the password.", zh: "他试图通过猜测密码来攻破这台电脑的安全防护。", src: "引用例句 · Wiktionary" }
         ],
         tip: "com（共同）+ promise（承诺）→ 互相让一步、共同承诺。熟词僻义：be compromised（被攻破/泄露）在安全新闻里高频。"
       },
@@ -190,7 +191,7 @@ window.WORD_BANK = {
         ex: [
           { en: "Cancel any subscription you haven't used for a month — most people find at least one.", zh: "取消一个月都没用过的订阅——多数人至少能找出一个。", src: "自编例句" },
           { en: "The family subscription covers six people, so we split the music app bill.", zh: "家庭订阅可以覆盖六个人，所以我们拼单分摊了音乐 App 的费用。", src: "自编例句" },
-          { en: "Free trials often turn into paid subscriptions automatically; set a reminder to cancel.", zh: "免费试用常常会自动转成付费订阅；设个提醒去取消。", src: "自编例句" }
+          { en: "I have a monthly subscription to the Daily Telegraph newspaper.", zh: "我订了《每日电讯报》的月度订阅。", src: "引用例句 · Wiktionary" }
         ],
         tip: "sub（下面）+ script（写）→「在名单下面签名」→订阅。动词 subscribe to（订阅；赞同（观点））。"
       }
@@ -241,7 +242,7 @@ window.WORD_BANK = {
         ex: [
           { en: "After thirty minutes of debate, we reached a consensus on the launch date.", zh: "经过半小时讨论，我们就上线日期达成了共识。", src: "自编例句" },
           { en: "There is a growing consensus that hybrid work is here to stay.", zh: "越来越多的人认同：混合办公将成为常态。", src: "自编例句" },
-          { en: "Let's pick the new restaurant by consensus — everyone chooses one dish each.", zh: "新餐厅大家商量着定——每人点一道菜。", src: "自编例句" }
+          { en: "After years of debate over the best wine to serve at Thanksgiving, no real consensus has emerged.", zh: "围绕感恩节该上哪种葡萄酒争论了多年，至今仍未形成真正的共识。", src: "引用例句 · Wiktionary" }
         ],
         tip: "con（共同）+ sens（感觉，同 sense 词根）→「共同的感觉」→共识。搭配 reach a consensus on sth；注意拼写中间是 sensus。"
       },
@@ -253,7 +254,7 @@ window.WORD_BANK = {
         ex: [
           { en: "The earphones broke within a week, and the store gave a full refund.", zh: "耳机一周内就坏了，商店全额退款。", src: "自编例句" },
           { en: "If the event is cancelled, tickets are refunded automatically within five days.", zh: "活动若取消，票款将在五天内自动退还。", src: "自编例句" },
-          { en: "Ask for a refund rather than store credit if you are sure you won't shop there again.", zh: "如果确定不再光顾，宁可要退款，也别接受店内消费额度。", src: "自编例句" }
+          { en: "If the camera is faulty, you can return it to the store where you bought it for a full refund.", zh: "如果相机有质量问题，可以退回购买的商店，获得全额退款。", src: "引用例句 · Wiktionary" }
         ],
         tip: "重音「名前动后」：REFund（n. 退款）/ reFUND（v. 退还）。re（回）+ fund（资金）→ 资金回流。"
       }
@@ -280,7 +281,7 @@ window.WORD_BANK = {
         ex: [
           { en: "This braised chicken recipe needs only five ingredients and one pot.", zh: "这道炖鸡食谱只需要五种食材和一口锅。", src: "自编例句" },
           { en: "Follow the recipe exactly the first time, then adjust it to your taste.", zh: "第一次严格照食谱做，之后再按自己的口味调整。", src: "自编例句" },
-          { en: "Short meetings and clear owners are a recipe for finishing projects on time.", zh: "短会加明确的负责人，就是按时完成项目的秘诀。", src: "自编例句" }
+          { en: "His new approach is definitely a recipe for success.", zh: "他的新方法绝对是成功的秘诀。", src: "引用例句 · Wiktionary" }
         ],
         tip: "别与 receipt（收据）混淆：recipe 中间是 pi。习语 a recipe for disaster（招灾的「配方」）很常用。"
       },
@@ -292,7 +293,7 @@ window.WORD_BANK = {
         ex: [
           { en: "Moving the launch to March is feasible if we cut two features.", zh: "如果砍掉两个功能，把上线挪到三月是可行的。", src: "自编例句" },
           { en: "Is it feasible to visit both cities within a three-day trip?", zh: "三天时间的旅行，玩两座城市可行吗？", src: "自编例句" },
-          { en: "The plan looks good on paper; the question is whether it is financially feasible.", zh: "方案纸面上很漂亮，问题是财务上是否可行。", src: "自编例句" }
+          { en: "His plan to rid Trafalgar Square of pigeons by bringing in peregrine falcons to eat them was dismissed as not feasible.", zh: "他提出用引入游隼捕食的办法清理特拉法加广场的鸽子，该计划因不具可行性被否决。", src: "引用例句 · Wiktionary" }
         ],
         tip: "词根 feas（做，源自拉丁语 facere）+ -ible（能够）→「能做的」→可行。近义 practical、viable。"
       },
@@ -316,7 +317,7 @@ window.WORD_BANK = {
         ex: [
           { en: "He was reluctant to admit that the deadline was unrealistic.", zh: "他不愿承认那个截止日期不切实际。", src: "自编例句" },
           { en: "I'm reluctant to lend my car out, but happy to help you rent one.", zh: "我不太愿意把车借出去，但很乐意帮你租一辆。", src: "自编例句" },
-          { en: "Reluctant at first, the team grew to love the new weekly demo.", zh: "起初并不情愿，团队后来爱上了每周一次的演示。", src: "自编例句" }
+          { en: "She was reluctant to lend him the money", zh: "她不太愿意把钱借给他。", src: "引用例句 · Wiktionary" }
         ],
         tip: "re（往回）+ luct（拉丁语「挣扎」）+ ant →「心里在挣扎」→不情愿。固定搭配 be reluctant to do sth。"
       }
@@ -343,7 +344,7 @@ window.WORD_BANK = {
         ex: [
           { en: "Rent is five thousand a month, and utilities add another four hundred.", zh: "房租每月五千，水电燃气另加四百。", src: "自编例句" },
           { en: "Check the average utilities cost before signing the lease.", zh: "签租约之前，先了解一下水电费的大致行情。", src: "自编例句" },
-          { en: "The utility of a checklist shows in emergencies, when memory fails.", zh: "清单的用处体现在紧急时刻——那时记忆力靠不住。", src: "自编例句" }
+          { en: "I've bought a new disk utility that can recover deleted files.", zh: "我买了一个新的磁盘工具软件，可以恢复被删除的文件。", src: "引用例句 · Wiktionary" }
         ],
         tip: "日常生活里最实用的是复数 utilities（水电网费账单）。词根 ut（用）→ utile「有用的」，形容词 utilitarian（实用的）。"
       },
@@ -367,7 +368,7 @@ window.WORD_BANK = {
         ex: [
           { en: "She resigned after ten years to start her own studio.", zh: "十年之后她辞职，创办了自己的工作室。", src: "自编例句" },
           { en: "He handed in his resignation letter the day the new offer landed.", zh: "新的录用通知一到手，他当天就递交了辞职信。", src: "自编例句" },
-          { en: "Stuck in traffic again, I resigned myself to being late and called ahead.", zh: "又堵在路上，我认命般接受了要迟到的事实，先打电话告知对方。", src: "自编例句" }
+          { en: "He resigned the crown to follow his heart.", zh: "他为追随内心而让出了王位。", src: "引用例句 · Wiktionary" }
         ],
         tip: "re（解除）+ sign（签名）→「把签过的名收回去」→辞职。熟词僻义：resign yourself to sth（认命、只好接受）。注意与 re-sign（重新签约）拼写差异。"
       },
@@ -418,7 +419,7 @@ window.WORD_BANK = {
         ex: [
           { en: "The team fulfilled the contract two weeks ahead of schedule.", zh: "团队提前两周履行完了合同。", src: "自编例句" },
           { en: "A job that pays well but bores you rarely fulfills you for long.", zh: "报酬不错却无聊的工作，很难让人长久地感到满足。", src: "自编例句" },
-          { en: "Order #1023 was fulfilled this morning; tracking goes live this evening.", zh: "1023 号订单已于今晨发货履约，今晚可以查物流。", src: "自编例句" }
+          { en: "You made a promise, son, and now you must fulfill it.", zh: "你许下了诺言，孩子，现在就必须兑现它。", src: "引用例句 · Wiktionary" }
         ],
         tip: "full（满）+ fill（填）→「把期待填满」。名词 fulfillment 双关：履行 /（人生的）满足感。电商状态 fulfilled = 已发货履约。"
       },
@@ -430,7 +431,7 @@ window.WORD_BANK = {
         ex: [
           { en: "I coordinate between design and engineering so nothing gets lost.", zh: "我在设计和工程之间做协调，确保信息不遗漏。", src: "自编例句" },
           { en: "Four families coordinated to share one tutor for the kids.", zh: "四户家庭协调合请了一位家教。", src: "自编例句" },
-          { en: "Volunteers used a group chat to coordinate relief supplies.", zh: "志愿者用群聊来统筹救援物资。", src: "自编例句" }
+          { en: "Give me your coordinates and we'll come and rescue you.", zh: "把你的坐标发给我，我们就来救你。", src: "引用例句 · Wiktionary" }
         ],
         tip: "co（共同）+ ordinate（次序）→「让大家处在同一次序上」→协调。动词重音在 -di：coordiNATE。"
       },
@@ -442,7 +443,7 @@ window.WORD_BANK = {
         ex: [
           { en: "Give the contract a thorough read before signing anything.", zh: "签字之前，把合同从头到尾彻底读一遍。", src: "自编例句" },
           { en: "The doctor was thorough, checking symptoms I hadn't even mentioned.", zh: "医生非常细致，连我没提到的症状都检查了。", src: "自编例句" },
-          { en: "A thorough cleanup of the inbox takes one focused hour.", zh: "彻底清理一遍收件箱，只需要专注的一小时。", src: "自编例句" }
+          { en: "He is the most thorough worker I have ever seen.", zh: "他是我见过的做事最细致周全的员工。", src: "引用例句 · Wiktionary" }
         ],
         tip: "注意拼写双 h：thorough。发音 /ˈθʌrə/（两拍），与 through /θruː/（一拍）区分。搭配 a thorough review / check。"
       }

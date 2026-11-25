@@ -1,0 +1,21 @@
+{
+  "leverage": { "en": "A crowbar uses leverage to pry nails out of wood.", "zh": "撬棍利用杠杆原理，把钉子从木头里撬出来。" },
+  "procrastinate": { "en": "He procrastinated until the last minute and had to stay up all night to finish.", "zh": "他一直拖到最后一刻，不得不熬夜把事情做完。" },
+  "negotiate": { "en": "The client and server computers must first negotiate a network protocol to be used.", "zh": "客户端与服务器计算机必须先协商好要使用的网络协议。" },
+  "chore": { "en": "Washing dishes is a chore, but we cannot just stop eating.", "zh": "洗碗是件烦人的杂活，但我们总不能从此不吃饭吧。" },
+  "incentive": { "en": "Management offered the sales team a $500 incentive for each car sold.", "zh": "管理层向销售团队承诺：每卖出一辆车，就有 500 美元的奖励。" },
+  "reservation": { "en": "I have a hotel reservation in the name of Mr Smith.", "zh": "我用史密斯先生的名字预订了酒店房间。" },
+  "warranty": { "en": "I made sure to check the terms of my warranty for my computer to ensure I was covered in case it broke down.", "zh": "我特意查看了电脑的保修条款，确保万一出故障也能获得保障。" },
+  "compromise": { "en": "He tried to compromise the security in the computer by guessing the password.", "zh": "他试图通过猜测密码来攻破这台电脑的安全防护。" },
+  "subscription": { "en": "I have a monthly subscription to the Daily Telegraph newspaper.", "zh": "我订了《每日电讯报》的月度订阅。" },
+  "consensus": { "en": "After years of debate over the best wine to serve at Thanksgiving, no real consensus has emerged.", "zh": "围绕感恩节该上哪种葡萄酒争论了多年，至今仍未形成真正的共识。" },
+  "refund": { "en": "If the camera is faulty, you can return it to the store where you bought it for a full refund.", "zh": "如果相机有质量问题，可以退回购买的商店，获得全额退款。" },
+  "recipe": { "en": "His new approach is definitely a recipe for success.", "zh": "他的新方法绝对是成功的秘诀。" },
+  "feasible": { "en": "His plan to rid Trafalgar Square of pigeons by bringing in peregrine falcons to eat them was dismissed as not feasible.", "zh": "他提出用引入游隼捕食的办法清理特拉法加广场的鸽子，该计划因不具可行性被否决。" },
+  "reluctant": { "en": "She was reluctant to lend him the money", "zh": "她不太愿意把钱借给他。" },
+  "utility": { "en": "I've bought a new disk utility that can recover deleted files.", "zh": "我买了一个新的磁盘工具软件，可以恢复被删除的文件。" },
+  "resign": { "en": "He resigned the crown to follow his heart.", "zh": "他为追随内心而让出了王位。" },
+  "fulfill": { "en": "You made a promise, son, and now you must fulfill it.", "zh": "你许下了诺言，孩子，现在就必须兑现它。" },
+  "coordinate": { "en": "Give me your coordinates and we'll come and rescue you.", "zh": "把你的坐标发给我，我们就来救你。" },
+  "thorough": { "en": "He is the most thorough worker I have ever seen.", "zh": "他是我见过的做事最细致周全的员工。" }
+}
